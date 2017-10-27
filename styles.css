@@ -1,0 +1,83 @@
+body{
+    font-family: cursive;
+    font-size: 2em;
+    background-color: lightgrey;
+    color: black
+}
+nav
+{
+    font-size: 2em;
+}
+ul.nav a:hover,a:visited {
+     background-color:transparent !important;
+      }
+.navbar-toggle .icon-bar {
+    background-color: white;
+}
+.active{
+    border-bottom: solid white 2px;    
+}
+.navbar-custom
+{
+    background-color: transparent;
+}
+.nav.navbar-nav li a {
+    color:white;
+}
+#home
+{
+    height: 100vh;
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.center
+{
+    width: 500px;
+    height: 200px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}
+h1
+{
+text-align: center;
+font-size: 3em;
+}
+.typewriter h1 {
+  color: #fff;
+  position: absolute;
+  font-family: cursive;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: typing 5.5s steps(50, end)
+}
+.typewriter h1:nth-child(2) {
+  top:50px;
+  position: absolute;
+  
+}
+.typewriter h1:nth-child(3) {
+  top:100px;
+  position: absolute;
+  
+}
+
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0;}
+  50%{top:10%}
+  to { width: 100%; }
+}
+
+.message-container
+{
+    position: relative;
+    height: 100vh
+}
+
