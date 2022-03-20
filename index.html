@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="script.min.js"></script>
+        <link href="styles.css" rel="stylesheet"/>
+    </head>
+    <body onload="checkForNew()">
+        <header class="header">
+            <div class="icon"></div>
+            <div class="heading">GOBBLE-TOE</div>
+            <div class="rule-link" onclick="showRules()">Rules</div>
+        </header>
+        <div class="game-container" id="board">
+            
+            <div class="content-container">
+                <div class="player1-control-container" id="player1Div">
+                    <div class="v-center"><span class="bold-class">A</span>nunnak<span class="bold-class">I</span></div>
+                    <div class="player2-level-cls" id="ai1">1</div>
+                    <div class="player2-level-cls" id="ai2">2</div>
+                    <div class="player2-level-cls" id="ai3">3</div>
+                    <div class="player2-level-cls" id="ai4">4</div>
+                    <div class="player2-level-cls" id="ai5">5</div>
+                    <div class="player2-level-cls" id="ai6">6</div>
+                </div>
+                <div class="board-container">
+                    <div id="row1" class="row">
+                        <div class="col available" onclick="assignValue(this.id)" id="box11"></div>
+                        <div class="col available" onclick="assignValue(this.id)" id="box12"></div>
+                        <div class="col available" onclick="assignValue(this.id)" id="box13"></div>
+                    </div>
+                    <div id="row2" class="row">
+                        <div class="col available" onclick="assignValue(this.id)" id="box21"></div>
+                        <div class="col available" onclick="assignValue(this.id)" id="box22"></div>
+                        <div class="col available" onclick="assignValue(this.id)" id="box23"></div>
+                    </div>
+                    <div id="row3" class="row">
+                        <div class="col available" onclick="assignValue(this.id)" id="box31"></div>
+                        <div class="col available" onclick="assignValue(this.id)" id="box32"></div>
+                        <div class="col available" onclick="assignValue(this.id)" id="box33"></div>
+                    </div>
+                </div>
+                <div class="player1-control-container" id="player1Div">
+                    <div class="v-center bold-class">YOU</div>
+                    <div class="player1-level-cls available" id="player1" onclick="onValueSelection(1)">1</div>
+                    <div class="player1-level-cls available" id="player2" onclick="onValueSelection(2)">2</div>
+                    <div class="player1-level-cls available" id="player3" onclick="onValueSelection(3)">3</div>
+                    <div class="player1-level-cls available" id="player4" onclick="onValueSelection(4)">4</div>
+                    <div class="player1-level-cls available" id="player5" onclick="onValueSelection(5)">5</div>
+                    <div class="player1-level-cls available" id="player6" onclick="onValueSelection(6)">6</div>
+                </div>
+            </div>
+            
+            
+        </div>
+
+        <div class="popup-class" id="popup">
+            <div id="popBody" class="pop-body">
+                  <div id="messageBody">
+                    Its a Draw !! Better luck next time
+                  </div> 
+                <div class="close-button" onclick="reset()" >X</div>
+            </div>
+        </div>
+
+        <div class="popup-class" id="rulespopup">
+            <div id="rulesBody" class="rules-body">
+                  <div id="rulesMessage">
+                    GOBBLE-TOE is just like regular tic-tac-toe with few enhancements
+                  </div>
+                  <div>
+                      <p>Enhancements:</p>
+                      <ul>
+                          <li>Each player gets 1-6 levels of boxes</li>
+                          <li>Each box can be used only once</li>
+                          <li>One can gobble/replace other players box of lesser level</li>
+                          <li>Its a win as soon as one gets 3 boxes in a row</li>
+                          <li>Its a draw if the board fills up or the boxes are empty</li>
+                          <li>You play first</li>
+                      </ul>
+                  </div>
+                  <div>
+                      Have fun !!
+                  </div> 
+                <div class="close-button" onclick="closeRules()" >X</div>
+            </div>
+        </div>
+    </body>
+</html>
